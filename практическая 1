@@ -1,0 +1,67 @@
+package ru.geekbrains.lession1;
+
+public class FirstApp {
+    public static void main(String[] args) { //Задание 1. прописали метод main
+
+        System.out.println("Задание 1. Прописали метод main.");
+
+        byte aa = 1;
+        short bb = -150;
+        int cc = 125000;
+        long dd = 10000L; //Задание 2. создаем переменные
+        float e = 125.58f;
+        double f = 545.689;
+        char g = '\u0000';
+        boolean h = true;
+        System.out.println("Задание 2. Создали переменные разных типов данных. a = " + aa + "; e = " + e + "; h = " + h + " и так далее.");
+
+        float a = 54.5f;
+        float b = 2.5f;
+        float c = 8.36f; //Задание 3. a, b, c, d – аргументы метода, имеющие тип float
+        float d = 45.45f;
+        float res = calculate(a, b, c, d);
+        System.out.println("Задание 3. a * (b + (c / d)) = " + res);
+
+        int x1 = 7; //Задание 4. Передаем два целых числа
+        int x2 = 12;
+        System.out.println("Задание 4. Сумма двух чисел " + x1 + " и " + x2 + " = " + task10and20(x1, x2) );
+
+        int x = -17;// Задание 5. Положительное число или отрицательное.
+        isPositiveOrNegative(x);
+
+        int y = 158; //Задание 6. Положительное (false) или отрицательное (true)
+        isNegative(y);
+        System.out.println("Задание 6. " + isNegative(y) );
+
+        String n = "Никитос!"; // Задание 7. Передаем текст.
+        myName(n);
+    }
+
+    public static float calculate (float a, float b, float c, float d) {
+        return a * (b + (c / d)); // метод к заданию №3
+    }
+
+    public static boolean task10and20(int x1, int x2) { //метод к заданию 4
+        int sum = (x1 + x2);
+        if (sum > 10 & sum < 20) return true;
+        else return false;
+        }
+
+    public static void isPositiveOrNegative(int x) { // метод к заданию 5
+        if (x >= 0) {
+            System.out.println("Задание 5. " + x + " - число положительное.");
+        } else {
+            System.out.println("Задание 5. " + x + " - число отрицательное.");
+        }
+    }
+
+    public static boolean isNegative(int y) { //метод к заданию 6
+        if (y < 0) {
+            return true;
+        } return false;
+    }
+
+    public static void myName(String n) { // метод к заданию 7
+        System.out.println("Задание 7. Привет, " + n);
+    }
+}
